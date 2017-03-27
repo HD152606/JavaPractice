@@ -20,7 +20,7 @@ public class CarTest2 {
 		
 		Car2 car2 = new Car2();
 		
-		System.out.println("제조사명 : "+car2.getCompany());
+		System.out.println("제조사명 : "+ car2.getCompany());
 		System.out.println("모델명 : "+car2.getModel());
 		System.out.println("색상 : "+car2.getColor());
 		System.out.println("최대속도 : "+String.format("%,d",car2.getMaxSpeed())+"km");
