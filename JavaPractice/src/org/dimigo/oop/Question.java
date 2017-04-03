@@ -17,32 +17,22 @@ import java.util.Scanner;
  */
 public class Question {
 	public static void main(String[] args) {
+		String[] questions = {"1. 가장 좋아하는 가수는?", "2. 가장 좋아하는 배우는?", "3. 가장 좋아하는 과목은?"};
+		String[] answers = {"트와이스","원빈", "응용 프로그래밍"};
+		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("1.");
-		StringBuilder sb = new StringBuilder("가장 좋아하는 가수는? ");
-		System.out.println(sb);
-		String answer = scanner.nextLine();
-		System.out.println((answer.equals("빅뱅"))?"정답입니다!":"틀렸습니다!");
-		sb.append("빅뱅");
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<3; i++){
+			System.out.println(questions[i]);
+			String answer = scanner.nextLine();
+			System.out.println((answer.equals(answers[i]))?"정답입니다!":"틀렸습니다!");
 		
-		System.out.print("1.");
-		StringBuilder sb2 = new StringBuilder("가장 좋아하는 배우는? ");
-		System.out.println(sb2);
-		String answer2 = scanner.nextLine();
-		System.out.println((answer2.equals("원빈"))?"정답입니다!":"틀렸습니다!");
-		sb2.append("원빈");
-		
-		System.out.print("1.");
-		StringBuilder sb3 = new StringBuilder("가장 좋아하는 과목은? ");
-		System.out.println(sb3);
-		String answer3 = scanner.nextLine();
-		System.out.println((answer3.equals("응용 프로그래밍"))?"정답입니다!":"틀렸습니다!");
-		sb3.append("응용 프로그래밍");
+			sb.append(questions[i]+" ").append(answers[i]).append(" 입니다.").append("\n");
+
+		}
 		
 		System.out.println("<<결과 출력>>");
-		System.out.println(sb.toString()+"입니다.");
-		System.out.println(sb2.toString()+"입니다.");
-		System.out.println(sb3.toString()+"입니다.");
+		System.out.println(sb.toString());
 		
 	}
 
